@@ -1,0 +1,59 @@
+.footer {
+  background: #191c1f;
+  color: #999;
+  font-family: Arial;
+}
+
+.footer-container {
+  width: 85%;
+  padding: 35px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-box {
+  width: 18%;
+}
+
+.footer-box h2 {
+  color: white;
+  font-size: 18px;
+}
+
+
+
+.footer-box h4 {
+  color: white;
+  font-size: 10px;
+}
+
+.footer-box p {
+  font-size: 9px;
+  margin: 8px 0;
+}
+
+.yellow {
+  color: #ffc400;
+}
+
+.app {
+  background: #25292d;
+  color: white;
+  width: 100px;
+  padding: 8px;
+  margin: 8px 0;
+  font-size: 8px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tags span {
+  border: 1px solid #444;
+  color: #ddd;
+  padding: 4px 7px;
+  font-size: 8px;
+}

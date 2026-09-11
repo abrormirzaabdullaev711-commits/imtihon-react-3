@@ -1,0 +1,311 @@
+.home {
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+.hero {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  min-height: 310px;
+}
+
+.hero-main {
+  background: #f2f4f5;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  overflow: hidden;
+}
+
+.hero-text {
+  width: 47%;
+  z-index: 2;
+}
+
+.hero-text span,
+.hero-promo small,
+.discount-banner span,
+.bottom-banner span {
+  color: #2da5f3;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.hero-text h1 {
+  color: #191c1f;
+  font-size: 38px;
+  margin: 12px 0;
+}
+
+.hero-text p {
+  color: #5f6c72;
+  font-size: 13px;
+  line-height: 21px;
+}
+
+.hero button,
+.hero-promo button,
+.discount-banner button,
+.bottom-banner button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fa8232;
+  border: none;
+  color: #fff;
+  padding: 12px 17px;
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 18px;
+}
+
+.hero-main  img {
+  width: 53%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-promo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #e4e7e9;
+}
+
+.hero-promo.dark {
+  background: #191c1f;
+  color: white;
+}
+
+.hero-promo h2 {
+  font-size: 17px;
+  margin: 8px 0;
+}
+
+.hero-promo b {
+  color: #2da5f3;
+}
+
+.hero-promo img {
+  width: 45%;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.services {
+
+  height: 65px;
+  border: 1px solid #e4e7e9;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  margin-top: 30px;
+}
+
+.services{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 300px;
+  font-size: 30px;
+}
+
+.services span {
+  font-size: 22px;
+  color: #1b6392;
+}
+
+.services b{
+    display: block;
+}
+
+.services small {
+  display: block;
+}
+
+.services b {
+  font-size: 9px;
+}
+
+.services small {
+  font-size: 8px;
+  color: #929fa5;
+  margin-top: 3px;
+}
+
+
+
+.deals,
+.categories-section {
+  margin-bottom: 35px;
+  
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.section-title h2,
+.categories-section > h2 {
+  font-size: 20px;
+  color: #191c1f;
+  margin: 0;
+}
+
+.section-title span {
+  font-size: 10px;
+  color: #5f6c72;
+  margin-left: 15px;
+}
+
+.section-title span b {
+  background: #f3de6d;
+  padding: 5px;
+  color: #191c1f;
+}
+
+.section-title a {
+  color: #2da5f3;
+  font-size: 10px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.deals-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.categories-section  h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: 30px repeat(6, 1fr) 30px;
+  gap: 8px;
+}
+
+.category {
+  border: 1px solid #e4e7e9;
+  height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.category-icon img{
+width: 148px;
+height: 148px;
+}
+
+.category span {
+  font-size: 10px;
+  color: #191c1f;
+}
+
+.category-arrow {
+  border: none;
+  background: #fa8232;
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  align-self: center;
+}
+
+.featured-section {
+  display: grid;
+  grid-template-columns: 235px 1fr;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.discount-banner {
+  background: #f3de6d;
+  padding: 22px;
+  overflow: hidden;
+}
+
+.discount-banner h2 {
+  font-size: 26px;
+  margin: 10px 0;
+}
+
+.discount-banner p {
+  color: #5f6c72;
+  font-size: 10px;
+}
+
+.banner-tech {
+  font-size: 90px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.featured-products {
+  min-width: 0;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.bottom-banners {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.bottom-banner {
+  min-height: 165px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.homepod {
+  background: #f2f4f5;
+}
+
+.xiaomi {
+  background: #191c1f;
+  color: white;
+}
+
+.bottom-banner h2 {
+  font-size: 21px;
+  line-height: 27px;
+  margin: 8px 0;
+}
+
+.banner-object {
+  font-size: 110px;
+  color: #dce1e3;
+}
+
+.phone-object {
+  font-size: 90px;
+}
+
+
