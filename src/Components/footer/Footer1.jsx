@@ -1,6 +1,6 @@
 import React from 'react'
 import './footer.css'
-const Footer = () => {
+const Footer1 = () => {
   return (
     <div>
       <section className="footer">
@@ -68,4 +68,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer1

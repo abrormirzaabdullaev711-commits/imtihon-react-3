@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './Routes/Home/Home'
 import Category1 from './Routes/Category1/Category1'
 import Navbar from './Components/Navbar/Navbar'
-import Footer from './Components/footer/footer'
+import Footer1 from './Components/footer/Footer1'
 import Category2 from './Routes/Category2/Category2'
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
         <Route path='/category' element={<Category1/>}/>
         <Route path='/category2' element={<Category2/>}/>
       </Routes>
-      <Footer/>
+      <Footer1/>
     </div>
   )
 }
