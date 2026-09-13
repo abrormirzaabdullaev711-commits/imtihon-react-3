@@ -57,3 +57,23 @@
   padding: 4px 7px;
   font-size: 8px;
 }
+
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    row-gap: 28px;
+  }
+ 
+  .footer-box h2 {
+    font-size: 22px;
+  }
+ 
+  .tags {
+    gap: 6px;
+  }
+ 
+  .tags span {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}

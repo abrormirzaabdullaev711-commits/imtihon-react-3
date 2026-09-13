@@ -156,3 +156,43 @@ border-radius: 2px;
     padding: 10px;
     color: black;
 }
+
+@media (max-width: 480px) {
+  .Navbar h1 {
+    font-size: 15px;
+  }
+ 
+  .Navbar-middle h2 {
+    font-size: 13px;
+  }
+ 
+  .Navbar-end button {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+ 
+  .Navbar-2-end {
+    gap: 10px;
+  }
+ 
+  .Navbar-2-end .icons {
+    display: none;
+  }
+ 
+  .Main-navbar .wrapper h1 {
+    font-size: 18px;
+  }
+ 
+  .Main-navbar .icons {
+    gap: 14px;
+    font-size: 18px;
+  }
+ 
+  .Links {
+    gap: 12px;
+  }
+ 
+  .Links a {
+    font-size: 13px;
+  }
+}

@@ -304,3 +304,44 @@ background-color: #2DA5F3;
  
 
 }
+
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+  .product-grid.featured,
+  .product-grid.accessories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+  .categories-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+  .timer-badge {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+ 
+  .discount-card {
+    padding: 18px;
+  }
+ 
+  .discount-value {
+    font-size: 20px;
+  }
+ 
+  .macbook-left h1 {
+    font-size: 26px;
+  }
+ 
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  .news-image {
+    height: 160px;
+  }
+}
