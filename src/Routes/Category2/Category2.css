@@ -1,18 +1,15 @@
-
 .zara-page {
-  font-family: Arial, sans-serif;
   display: flex;
   gap: 24px;
   max-width: 1100px;
-  margin: 0 auto;
   padding: 16px;
 }
- 
+
 .zara-sidebar {
   width: 220px;
   flex-shrink: 0;
 }
- 
+
 .zara-sidebar-title {
   display: flex;
   align-items: center;
@@ -21,28 +18,27 @@
   font-size: 16px;
   margin-bottom: 20px;
 }
- 
+
 .zara-filter-group {
   border-top: 1px solid #eee;
   padding: 12px 0;
 }
- 
+
 .zara-filter-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: 600;
   font-size: 14px;
-  cursor: pointer;
 }
- 
+
 .zara-filter-options {
   margin-top: 12px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
- 
+
 .zara-filter-option {
   display: flex;
   align-items: center;
@@ -50,11 +46,9 @@
   font-size: 13px;
   color: #444;
 }
- 
-.zara-main {
-  flex: 1;
-}
- 
+
+
+
 .zara-topbar {
   display: flex;
   justify-content: space-between;
@@ -63,54 +57,40 @@
   font-size: 13px;
   color: #555;
 }
- 
+
 .zara-topbar-right {
   display: flex;
   align-items: center;
   gap: 12px;
 }
- 
+
 .zara-select {
   padding: 6px 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
- 
+
 .zara-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
- 
+
 .zara-card {
   display: flex;
   flex-direction: column;
 }
- 
-.zara-image-wrap {
-  position: relative;
-  background: #f0f0f0;
-  border-radius: 6px;
-  overflow: hidden;
-  margin-bottom: 10px;
-}
- 
+
+
 .zara-image {
   width: 100%;
   height: 180px;
   object-fit: cover;
   display: block;
 }
- 
-.zara-image-icons {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  gap: 10px;
-}
- 
+
+
+
 .zara-icon-btn {
   width: 36px;
   height: 36px;
@@ -120,13 +100,13 @@
   align-items: center;
   justify-content: center;
 }
- 
+
 .zara-deal-label {
   font-size: 12px;
   color: #e0263f;
   margin-bottom: 4px;
 }
- 
+
 .zara-deal-bar {
   height: 4px;
   background: #eee;
@@ -134,19 +114,19 @@
   margin-bottom: 10px;
   overflow: hidden;
 }
- 
+
 .zara-deal-bar-fill {
   height: 100%;
   background: #4a7dff;
   width: 60%;
 }
- 
+
 .zara-product-name {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 6px;
 }
- 
+
 .zara-rating {
   display: flex;
   align-items: center;
@@ -155,11 +135,11 @@
   color: #f5a623;
   margin-bottom: 10px;
 }
- 
+
 .zara-rating-count {
   color: #999;
 }
- 
+
 .zara-btn {
   width: 100%;
   padding: 10px;
@@ -167,17 +147,120 @@
   border-radius: 4px;
   font-size: 13px;
   font-weight: 600;
-  cursor: pointer;
   margin-bottom: 8px;
 }
- 
+
 .zara-btn-deal {
   background: #111;
   color: #f5a623;
 }
- 
+
 .zara-btn-buy {
   background: #111;
   color: #fff;
 }
- 
+
+@media (max-width: 992px) {
+  .zara-page {
+    gap: 18px;
+    padding: 14px;
+  }
+
+  .zara-sidebar {
+    width: 190px;
+  }
+
+  .zara-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .zara-image {
+    height: 170px;
+  }
+}
+
+@media (max-width: 768px) {
+  .zara-page {
+    display: block;
+    padding: 12px;
+  }
+
+  .zara-sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .zara-filter-group {
+    padding: 10px 0;
+  }
+
+  .zara-filter-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .zara-topbar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .zara-topbar-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .zara-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .zara-image {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .zara-page {
+    padding: 10px;
+  }
+
+  .zara-topbar {
+    font-size: 12px;
+  }
+
+  .zara-topbar-right {
+    gap: 8px;
+  }
+
+  .zara-select {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+
+  .zara-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .zara-image {
+    height: 130px;
+  }
+
+  .zara-product-name {
+    font-size: 12px;
+  }
+
+  .zara-deal-label {
+    font-size: 10px;
+  }
+
+  .zara-rating {
+    font-size: 10px;
+  }
+
+  .zara-btn {
+    padding: 8px 4px;
+    font-size: 10px;
+  }
+}

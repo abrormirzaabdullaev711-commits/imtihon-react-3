@@ -232,7 +232,6 @@ export { categoryList, categoryRows };
   "Electronics",
   "Beauty",
   "Home Improvement",
-  "Sport, Toys & Luggage"
 ];
  
 export { navLinks };
