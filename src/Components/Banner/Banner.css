@@ -1,6 +1,7 @@
 .home {
   max-width: 1450px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .hero {
@@ -58,9 +59,10 @@
   font-size: 10px;
   font-weight: 700;
   margin-top: 18px;
+  cursor: pointer;
 }
 
-.hero-main  img {
+.hero-main img {
   width: 53%;
   height: 100%;
   object-fit: cover;
@@ -78,6 +80,7 @@
   padding: 15px;
   background: #fff;
   border: 1px solid #e4e7e9;
+  overflow: hidden;
 }
 
 .hero-promo.dark {
@@ -101,8 +104,7 @@
 }
 
 .services {
-
-  height: 65px;
+  min-height: 65px;
   border: 1px solid #e4e7e9;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -110,12 +112,23 @@
   margin-top: 30px;
 }
 
-.services{
+.services > div {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 300px;
-  font-size: 30px;
+  align-items: center;
+  text-align: left;
+}
+
+.services b {
+  display: block;
+  font-size: 9px;
+}
+
+.services small {
+  display: block;
+  font-size: 8px;
+  color: #929fa5;
+  margin-top: 3px;
 }
 
 .services span {
@@ -123,37 +136,15 @@
   color: #1b6392;
 }
 
-.services b{
-    display: block;
-}
-
-.services small {
-  display: block;
-}
-
-.services b {
-  font-size: 9px;
-}
-
-.services small {
-  font-size: 8px;
-  color: #929fa5;
-  margin-top: 3px;
-}
-
-
-
 .deals,
 .categories-section {
   margin-bottom: 35px;
-  
 }
 
 .section-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .section-title h2,
@@ -189,7 +180,7 @@
   grid-template-columns: repeat(6, 1fr);
 }
 
-.categories-section  h2 {
+.categories-section h2 {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -210,9 +201,10 @@
   gap: 10px;
 }
 
-.category-icon img{
-width: 148px;
-height: 148px;
+.category-icon img {
+  width: 148px;
+  height: 148px;
+  object-fit: contain;
 }
 
 .category span {
@@ -228,6 +220,7 @@ height: 148px;
   width: 28px;
   height: 28px;
   align-self: center;
+  cursor: pointer;
 }
 
 .featured-section {
@@ -308,4 +301,373 @@ height: 148px;
   font-size: 90px;
 }
 
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
 
+  .hero-main {
+    min-height: 320px;
+  }
+
+  .hero-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-promo {
+    min-height: 180px;
+  }
+
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100px;
+  }
+
+  .services > div {
+    min-height: 45px;
+  }
+
+  .deals-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .categories {
+    grid-template-columns: 30px repeat(3, 1fr) 30px;
+  }
+
+  .featured-section {
+    grid-template-columns: 200px 1fr;
+  }
+
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 0 10px;
+  }
+
+  .hero {
+    margin-top: 15px;
+  }
+
+  .hero-main {
+    min-height: 280px;
+    padding-left: 25px;
+  }
+
+  .hero-text {
+    width: 52%;
+  }
+
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  .hero-text p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .hero-main img {
+    width: 48%;
+  }
+
+  .hero-promo {
+    padding: 12px;
+  }
+
+  .hero-promo h2 {
+    font-size: 15px;
+  }
+
+  .hero-promo img {
+    width: 40%;
+  }
+
+  .services {
+    margin-top: 20px;
+  }
+
+  .deals,
+  .categories-section {
+    margin-bottom: 25px;
+  }
+
+  .deals-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categories {
+    grid-template-columns: 25px repeat(3, 1fr) 25px;
+    gap: 5px;
+  }
+
+  .category {
+    height: 120px;
+  }
+
+  .category-icon img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .featured-section {
+    grid-template-columns: 1fr;
+  }
+
+  .discount-banner {
+    min-height: 200px;
+  }
+
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bottom-banners {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    padding: 0 8px;
+  }
+
+  .hero {
+    margin-top: 10px;
+  }
+
+  .hero-main {
+    min-height: 230px;
+    padding: 20px 15px;
+  }
+
+  .hero-text {
+    width: 55%;
+  }
+
+  .hero-text span {
+    font-size: 8px;
+  }
+
+  .hero-text h1 {
+    font-size: 22px;
+    margin: 7px 0;
+  }
+
+  .hero-text p {
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .hero button {
+    padding: 9px 11px;
+    font-size: 8px;
+    margin-top: 12px;
+  }
+
+  .hero-main img {
+    width: 45%;
+  }
+
+  .hero-right {
+    display: flex;
+  }
+
+  .hero-promo {
+    min-height: 140px;
+    padding: 10px;
+  }
+
+  .hero-promo h2 {
+    font-size: 13px;
+  }
+
+  .hero-promo small {
+    font-size: 8px;
+  }
+
+  .hero-promo img {
+    max-height: 100px;
+  }
+
+  .hero-promo button {
+    padding: 8px 10px;
+    font-size: 8px;
+  }
+
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 120px;
+    margin-top: 15px;
+  }
+
+  .services > div {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .services b {
+    font-size: 8px;
+  }
+
+  .services small {
+    font-size: 7px;
+  }
+
+  .section-title {
+    gap: 10px;
+  }
+
+  .section-title h2,
+  .categories-section > h2 {
+    font-size: 16px;
+  }
+
+  .section-title span,
+  .section-title a {
+    font-size: 8px;
+  }
+
+  .deals-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categories {
+    grid-template-columns: 22px repeat(2, 1fr) 22px;
+    gap: 5px;
+  }
+
+  .category {
+    height: 110px;
+  }
+
+  .category-icon img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .category span {
+    font-size: 9px;
+  }
+
+  .category-arrow {
+    width: 24px;
+    height: 24px;
+    font-size: 9px;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .discount-banner {
+    min-height: 170px;
+    padding: 18px;
+  }
+
+  .discount-banner h2 {
+    font-size: 22px;
+  }
+
+  .banner-tech {
+    font-size: 65px;
+  }
+
+  .bottom-banner {
+    min-height: 140px;
+    padding: 18px;
+  }
+
+  .bottom-banner h2 {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .banner-object {
+    font-size: 75px;
+  }
+
+  .phone-object {
+    font-size: 65px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-main {
+    min-height: 210px;
+    padding: 15px 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 19px;
+  }
+
+  .hero-text p {
+    font-size: 9px;
+    line-height: 13px;
+  }
+
+  .hero-main img {
+    width: 43%;
+  }
+
+  .hero-promo {
+    min-height: 125px;
+  }
+
+  .hero-promo h2 {
+    font-size: 11px;
+  }
+
+  .hero-promo img {
+    max-height: 85px;
+  }
+
+  .services {
+    min-height: 110px;
+  }
+
+  .deals-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .categories {
+    grid-template-columns: 20px repeat(2, 1fr) 20px;
+  }
+
+  .category {
+    height: 95px;
+  }
+
+  .category-icon img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .category span {
+    font-size: 8px;
+  }
+
+  .bottom-banner {
+    min-height: 125px;
+    padding: 12px;
+  }
+
+  .bottom-banner h2 {
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  .banner-object {
+    font-size: 60px;
+  }
+
+  .phone-object {
+    font-size: 50px;
+  }
+}

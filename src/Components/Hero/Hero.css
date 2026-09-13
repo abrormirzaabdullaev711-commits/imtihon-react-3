@@ -13,10 +13,14 @@
   margin-bottom: 16px;
 }
 
+.section-header h2 {
+  font-size: 22px;
+}
+
 .timer-badge {
   background: #7b5cff;
   color: #fff;
-  padding: 4px 12px;
+  padding: 6px 12px;
   border-radius: 20px;
   font-size: 13px;
 }
@@ -33,7 +37,7 @@
 }
 
 .product-grid.accessories {
-  grid-template-columns: repeat(4, 1fr) ;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .product-card {
@@ -41,6 +45,7 @@
   border-radius: 8px;
   padding: 12px;
   background: #fff;
+  min-width: 0;
 }
 
 .product-image {
@@ -56,35 +61,38 @@
   font-size: 13px;
   margin: 6px 0;
   min-height: 34px;
+  line-height: 18px;
 }
 
 .product-price {
   font-weight: 600;
+  font-size: 15px;
 }
 
 .categories-row {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
   margin-bottom: 24px;
 }
-.categories-row img{
-    width: 100px;
-    height: 100px;
-}
+
 .category-item {
   text-align: center;
-  
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px;
 }
 
-.category-icon img{
-    width: 100px;
-    height: 100px;
+.categories-row img,
+.category-icon img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
 
 .category-name {
   font-size: 13px;
+  margin-top: 5px;
 }
 
 .discount-section {
@@ -94,20 +102,18 @@
   margin-bottom: 24px;
 }
 
-.discount-section img{
-    width: 100%;
-}
-
-.promo-row img{
-    width: 100px;
-    height: 100px;
-}
-
 .discount-card {
   background: #f4c542;
   border-radius: 8px;
   padding: 16px;
   color: #222;
+  overflow: hidden;
+}
+
+.discount-card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
 }
 
 .discount-label {
@@ -140,30 +146,47 @@
   color: #fff;
 }
 
+.discount-section > div:nth-child(2) {
+  min-width: 0;
+}
+
+.discount-section h3,
+.page > h3 {
+  font-size: 20px;
+  margin: 0 0 15px;
+}
+
 .promo-row {
-display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 16px;
   margin-bottom: 24px;
 }
 
 .promo-card {
+  min-height: 180px;
   border-radius: 8px;
   padding: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 
 .promo-card.light {
-    display: flex;
   background: #eee;
-  width: 600px;
 }
 
 .promo-card.dark {
   background: #111;
   color: #fff;
-  width: 600px;
+}
+
+.promo-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .promo-tag {
@@ -178,10 +201,9 @@ display: flex;
 .promo-title {
   font-size: 20px;
   font-weight: 700;
-
+  line-height: 25px;
+  margin: 8px 0;
 }
-
-
 
 .highlight-card {
   background: #f4c542;
@@ -198,72 +220,106 @@ display: flex;
   margin-bottom: 12px;
 }
 
-
-
-.save{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 40vh;
-    background-color: #FFE7D6;
+.save {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  min-height: 320px;
+  background-color: #ffe7d6;
+  margin-bottom: 30px;
+  overflow: hidden;
+  padding: 30px;
 }
 
-.save button{
-    width: 191px;
-height: 56px;
-padding-right: 32px;
-padding-left: 32px;
-gap: 12px;
-border-radius: 3px;
-background-color: #FA8232;
-color: white;
+.macbook-left {
+  max-width: 500px;
 }
 
-.sale{
-    width: 200px;
-    margin-bottom: 20px;
-height: 32;
-gap: 10px;
-border-radius: 2px;
-background-color: #2DA5F3;
-
+.macbook-left h1 {
+  font-size: 36px;
+  margin: 10px 0;
 }
 
+.macbook-left p {
+  color: #5f6c72;
+  font-size: 14px;
+  line-height: 22px;
+}
 
+.macbook-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.macbook-right img {
+  width: 400px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.save button {
+  width: 191px;
+  height: 56px;
+  padding: 0 32px;
+  border: none;
+  border-radius: 3px;
+  background-color: #fa8232;
+  color: white;
+  cursor: pointer;
+}
+
+.sale {
+  width: 200px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  background-color: #2da5f3;
+  color: white;
+}
+
+.sale h3 {
+  font-size: 11px;
+}
 
 .news-section {
   background: #f4f4f6;
   padding: 48px 16px;
   text-align: center;
 }
- 
+
 .news-heading {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 32px;
 }
- 
+
 .news-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
- 
+
 .news-card {
   background: #fff;
   border-radius: 6px;
+  overflow: hidden;
+  text-align: left;
 }
- 
+
 .news-image {
   width: 100%;
   height: 200px;
-
+  object-fit: cover;
 }
- 
+
 .news-body {
   padding: 16px;
 }
- 
+
 .news-meta {
   display: flex;
   align-items: center;
@@ -271,27 +327,30 @@ background-color: #2DA5F3;
   color: #f5a623;
   font-size: 12px;
   margin-bottom: 12px;
+  flex-wrap: wrap;
 }
- 
+
 .news-meta span {
   display: flex;
   align-items: center;
   gap: 4px;
   color: #999;
 }
- 
+
 .news-title {
   font-size: 15px;
   color: #222;
   margin-bottom: 10px;
+  line-height: 20px;
 }
- 
+
 .news-text {
   font-size: 13px;
   color: #888;
   margin-bottom: 16px;
+  line-height: 19px;
 }
- 
+
 .news-readmore {
   display: flex;
   align-items: center;
@@ -299,49 +358,398 @@ background-color: #2DA5F3;
   padding: 8px 16px;
   border: 1px solid #f5a623;
   border-radius: 20px;
+  background: transparent;
   color: #f5a623;
   font-size: 12px;
- 
-
+  cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+  .product-grid,
+  .product-grid.featured,
+  .product-grid.accessories {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-@media (max-width: 480px) {
-  .product-grid {
+  .categories-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .discount-section {
+    grid-template-columns: 220px 1fr;
+  }
+
+  .news-grid {
     grid-template-columns: repeat(2, 1fr);
   }
- 
+
+  .macbook-right img {
+    width: 330px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 12px;
+  }
+
+  .section-header h2 {
+    font-size: 19px;
+  }
+
+  .timer-badge {
+    font-size: 11px;
+    padding: 5px 9px;
+  }
+
+  .product-grid,
   .product-grid.featured,
   .product-grid.accessories {
     grid-template-columns: repeat(2, 1fr);
   }
- 
+
+  .product-image {
+    height: 170px;
+  }
+
   .categories-row {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
- 
-  .timer-badge {
-    font-size: 12px;
-    padding: 6px 10px;
+
+  .discount-section {
+    grid-template-columns: 1fr;
   }
- 
+
   .discount-card {
-    padding: 18px;
+    min-height: 250px;
   }
- 
-  .discount-value {
-    font-size: 20px;
+
+  .discount-card img {
+    width: 180px;
+    display: block;
+    margin: 20px auto 0;
   }
- 
+
+  .promo-row {
+    grid-template-columns: 1fr;
+  }
+
+  .promo-card {
+    min-height: 160px;
+  }
+
+  .save {
+    min-height: 280px;
+    padding: 25px;
+  }
+
+  .macbook-left {
+    max-width: 50%;
+  }
+
   .macbook-left h1 {
-    font-size: 26px;
+    font-size: 28px;
   }
- 
+
+  .macbook-left p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .macbook-right img {
+    width: 280px;
+  }
+
+  .save button {
+    width: 150px;
+    height: 45px;
+    padding: 0 20px;
+  }
+
   .news-grid {
     grid-template-columns: 1fr;
   }
- 
+
   .news-image {
-    height: 160px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 8px;
+  }
+
+  .section-header {
+    gap: 8px;
+  }
+
+  .section-header h2 {
+    font-size: 17px;
+  }
+
+  .timer-badge {
+    font-size: 9px;
+    padding: 5px 7px;
+    white-space: nowrap;
+  }
+
+  .product-grid,
+  .product-grid.featured,
+  .product-grid.accessories {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .product-card {
+    padding: 8px;
+  }
+
+  .product-image {
+    height: 140px;
+  }
+
+  .product-name {
+    font-size: 11px;
+    line-height: 15px;
+    min-height: 30px;
+  }
+
+  .product-price {
+    font-size: 13px;
+  }
+
+  .categories-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .category-item {
+    padding: 7px;
+  }
+
+  .categories-row img,
+  .category-icon img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .category-name {
+    font-size: 11px;
+  }
+
+  .discount-section {
+    gap: 12px;
+  }
+
+  .discount-card {
+    padding: 15px;
+    min-height: 220px;
+  }
+
+  .discount-label {
+    font-size: 12px;
+  }
+
+  .discount-value {
+    font-size: 20px;
+  }
+
+  .discount-card img {
+    width: 150px;
+    margin: 15px auto 0;
+  }
+
+  .discount-section h3,
+  .page > h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+  }
+
+  .promo-row {
+    gap: 10px;
+  }
+
+  .promo-card {
+    min-height: 140px;
+    padding: 15px;
+  }
+
+  .promo-card img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .promo-tag {
+    font-size: 9px;
+  }
+
+  .promo-title {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .promo-card .shop-btn {
+    font-size: 10px;
+    padding: 7px 12px;
+  }
+
+  .save {
+    min-height: 220px;
+    padding: 15px;
+    justify-content: space-between;
+  }
+
+  .macbook-left {
+    max-width: 55%;
+  }
+
+  .sale {
+    width: 145px;
+    min-height: 25px;
+  }
+
+  .sale h3 {
+    font-size: 8px;
+  }
+
+  .macbook-left h1 {
+    font-size: 23px;
+    margin: 7px 0;
+  }
+
+  .macbook-left p {
+    font-size: 9px;
+    line-height: 14px;
+  }
+
+  .macbook-right {
+    width: 45%;
+  }
+
+  .macbook-right img {
+    width: 180px;
+  }
+
+  .save button {
+    width: 120px;
+    height: 38px;
+    padding: 0 10px;
+    font-size: 10px;
+  }
+
+  .news-section {
+    padding: 30px 8px;
+  }
+
+  .news-heading {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .news-grid {
+    gap: 15px;
+  }
+
+  .news-image {
+    height: 170px;
+  }
+
+  .news-body {
+    padding: 12px;
+  }
+
+  .news-meta {
+    gap: 8px;
+    font-size: 10px;
+  }
+
+  .news-title {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .news-text {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .news-readmore {
+    font-size: 10px;
+    padding: 7px 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .product-image {
+    height: 120px;
+  }
+
+  .product-name {
+    font-size: 10px;
+  }
+
+  .product-price {
+    font-size: 12px;
+  }
+
+  .categories-row img,
+  .category-icon img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .category-name {
+    font-size: 10px;
+  }
+
+  .promo-card {
+    min-height: 125px;
+    padding: 10px;
+  }
+
+  .promo-card img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .promo-title {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .save {
+    min-height: 190px;
+  }
+
+  .macbook-left h1 {
+    font-size: 19px;
+  }
+
+  .macbook-left p {
+    font-size: 8px;
+    line-height: 12px;
+  }
+
+  .macbook-right img {
+    width: 140px;
+  }
+
+  .save button {
+    width: 100px;
+    height: 32px;
+    font-size: 9px;
+  }
+
+  .sale {
+    width: 125px;
+  }
+
+  .sale h3 {
+    font-size: 7px;
+  }
+
+  .news-image {
+    height: 150px;
   }
 }
