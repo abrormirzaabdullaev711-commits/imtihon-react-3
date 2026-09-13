@@ -231,7 +231,6 @@ export { categoryList, categoryRows };
   "Fashion",
   "Electronics",
   "Beauty",
-  "Home Improvement",
 ];
  
 export { navLinks };
