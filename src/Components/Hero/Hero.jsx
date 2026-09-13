@@ -1,6 +1,7 @@
 import React from "react";
 import "./Hero.css";
-import { dealsProducts, featuredProducts, accessoriesProducts, categories,newsList } from "../../mock/index";
+import { products, featuredProducts, accessoriesProducts, categories,newsList } from "../../mock/index";
+import { Link } from "react-router-dom";
 
 export default function App() {
   return (
@@ -11,9 +12,9 @@ export default function App() {
       </div>
 
       <div className="product-grid">
-        {dealsProducts.map((p) => (
+        {products.map((p) => (
           <div className="product-card" key={p.id}>
-            <img className="product-image" src={p.image} />
+           <Link to={`/product/${p.id}`}><img className="product-image" src={p.image} /></Link> 
             <div className="product-name">{p.name}</div>
             <div className="product-price">${p.price}</div>
           </div>

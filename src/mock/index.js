@@ -1,4 +1,4 @@
-const dealsProducts = [
+ const products = [
   {
     id: 1,
     name: "Xbox Series X 512GB SSD Console with Wireless Controller",
@@ -31,22 +31,23 @@ const dealsProducts = [
   },
   {
     id: 6,
-    name: "Portable Wshing Machine, 11lbs capacity Model 18NMFIAM",
+    name: "Portable Washing Machine, 11lbs capacity Model 18NMFIAM",
     price: 299,
     image: "drone.png"
   },
-    {
+  {
     id: 7,
     name: "2-Barrel Carburetor Carb 2100 Engine Increase Horsepower",
     price: 299,
     image: "computer.png"
   },
-    {
+  {
     id: 8,
     name: "JBL FLIP 4 - Waterproof Portable Bluetooth Speaker - Black",
     price: 299,
     image: "camero.png"
-  },
+  }
+
 ];
  
 const featuredProducts = [
@@ -332,4 +333,4 @@ const products123 = [
 
 export { brandList, products123 };
 
-export {accessoriesProducts,featuredProducts,dealsProducts,newsList}
+export {accessoriesProducts,featuredProducts,products,newsList}
